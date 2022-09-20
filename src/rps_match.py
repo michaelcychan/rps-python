@@ -1,12 +1,14 @@
-def rps_match(str1, str2):
+def rps_match(player1, player2):
+    str1 = player1.show_roll()
+    str2 = player2.show_roll()
     win_map = {"rock": "scissors", "scissors": "paper", "paper": "rock"}
     if check_valid_input(str1) and check_valid_input(str2):
         if str1 == str2:
             return "tie"
         elif win_map[str1] == str2:
-            return str1
+            return player1.show_name()
         else:
-            return str2
+            return player2.show_name()
     else:
         try:
             raise ValueError("Input was incorrect")

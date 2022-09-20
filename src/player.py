@@ -9,3 +9,6 @@ class Player:
 
     def show_roll(self):
         return self._roll
+
+    def show_name(self):
+        return self.name
